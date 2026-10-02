@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raíces Vivas de México</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4ead5;
+    color:#2d241c;
+}
+
+header{
+    background:#5c2f1f;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:19px;
+}
+
+nav{
+    background:#2f5d50;
+    text-align:center;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f2c14e;
+}
+
+.portada{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(rgba(45,36,28,.65),rgba(45,36,28,.65)),
+    url("https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.portada h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.portada p{
+    font-size:21px;
+    max-width:750px;
+    margin:auto;
+}
+
+.boton{
+    display:inline-block;
+    background:#d69e2e;
+    color:white;
+    padding:13px 25px;
+    margin-top:25px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:55px 8%;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.titulo h2{
+    color:#5c2f1f;
+    font-size:34px;
+}
+
+.titulo p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+.sala{
+    background:white;
+    margin-bottom:35px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.sala h3{
+    color:#2f5d50;
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.sala p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.contenedor{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.tarjeta{
+    background:white;
+    width:300px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.tarjeta img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.tarjeta div{
+    padding:20px;
+}
+
+.tarjeta h3{
+    color:#5c2f1f;
+    margin-bottom:10px;
+}
+
+.tarjeta p{
+    line-height:1.5;
+}
+
+.progresion{
+    background:#fff8e8;
+    border-left:7px solid #d69e2e;
+    padding:25px;
+    margin-top:20px;
+}
+
+.progresion h4{
+    color:#5c2f1f;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.multimedia{
+    text-align:center;
+}
+
+.video{
+    max-width:800px;
+    margin:25px auto;
+}
+
+.video iframe{
+    width:100%;
+    height:420px;
+    border:0;
+    border-radius:12px;
+}
+
+.mapa{
+    background:#2f5d50;
+    color:white;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.mapa h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.equipo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.persona{
+    background:white;
+    width:220px;
+    padding:25px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+.persona h3{
+    color:#5c2f1f;
+    margin-bottom:8px;
+}
+
+.reflexion{
+    background:#5c2f1f;
+    color:white;
+    text-align:center;
+    border-radius:15px;
+    padding:40px;
+    line-height:1.7;
+}
+
+footer{
+    background:#241b16;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    .portada h2{
+        font-size:34px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+        font-size:14px;
+    }
+
+    section{
+        padding:35px 5%;
+    }
+
+    .tarjeta{
+        width:100%;
+    }
+
+    .video iframe{
+        height:250px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>RAÍCES VIVAS DE MÉXICO</h1>
+
+<p>Museo Digital de Cultura, Historia y Tradiciones</p>
+
+</header>
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+<a href="#sala1">Sala 1</a>
+<a href="#sala2">Sala 2</a>
+<a href="#sala3">Sala 3</a>
+<a href="#multimedia">Multimedia</a>
+<a href="#equipo">Equipo</a>
+
+</nav>
+
+<section class="portada" id="inicio">
+
+<div>
+
+<h2>Bienvenidos</h2>
+
+<p>
+México es un país lleno de historia, culturas, tradiciones,
+lenguas, sabores, música y formas de vida que continúan
+presentes hasta nuestros días.
+</p>
+
+<a class="boton" href="#sala1">ENTRAR AL MUSEO</a>
+
+</div>
+
+</section>
+
+<section id="sala1">
+
+<div class="titulo">
+
+<h2>🏺 SALA 1 — NUESTRAS RAÍCES</h2>
+
+<p>
+Conociendo los orígenes culturales de México.
+</p>
+
+</div>
+
+<div class="sala">
+
+<h3>Los pueblos originarios</h3>
+
+<p>
+México tiene una gran diversidad cultural. A lo largo de su
+historia han existido diferentes pueblos originarios que han
+desarrollado sus propias lenguas, costumbres, conocimientos,
+formas de organización y expresiones artísticas.
+</p>
+
+<p>
+Entre las culturas que forman parte de la historia de México
+se encuentran los mayas, mexicas, zapotecos, mixtecos,
+purépechas y muchos otros pueblos.
+</p>
+
+</div>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+
+
+<div>
+
+<h3>Lenguas</h3>
+
+<p>
+Las lenguas indígenas forman parte de la diversidad cultural
+de México y son una forma importante de conservar conocimientos
+e historias de las comunidades.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+
+
+<div>
+
+<h3>Conocimientos</h3>
+
+<p>
+Los pueblos originarios han transmitido conocimientos sobre
+la naturaleza, agricultura, alimentación, medicina tradicional
+y artes.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+
+
+<div>
+
+<h3>Artes</h3>
+
+<p>
+La pintura, los textiles, la cerámica y otras artesanías
+representan parte de la identidad cultural mexicana.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="progresion">
+
+<h4>Progresión 1</h4>
+
+<p>
+Reconocemos nuestras raíces culturales y comprendemos que
+la diversidad de los pueblos y sus conocimientos forma parte
+del patrimonio de México.
+</p>
+
+</div>
+
+</section>
+
+<section id="sala2">
+
+<div class="titulo">
+
+<h2>🎭 SALA 2 — TRADICIONES QUE CONTINÚAN</h2>
+
+<p>
+Las expresiones culturales que siguen formando parte de la vida
+de las comunidades.
+</p>
+
+</div>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Gastronomía</h3>
+
+<p>
+La comida mexicana reúne ingredientes, técnicas y conocimientos
+que han pasado de generación en generación.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Artesanías</h3>
+
+<p>
+Las artesanías representan diferentes historias, materiales,
+formas y conocimientos de las comunidades mexicanas.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Música y danza</h3>
+
+<p>
+La música y la danza son expresiones que permiten transmitir
+historias, celebraciones y formas de identidad.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+
+
+<div>
+
+<h3>Día de Muertos</h3>
+
+<p>
+Es una tradición en la que muchas familias recuerdan a sus
+seres queridos mediante altares, alimentos, flores y otros
+elementos simbólicos.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="progresion">
+
+<h4>Progresión 2</h4>
+
+<p>
+Observamos cómo las tradiciones culturales se mantienen y se
+transmiten entre generaciones mediante las familias,
+comunidades y diferentes expresiones culturales.
+</p>
+
+</div>
+
+</section>
+
+<section id="sala3">
+
+<div class="titulo">
+
+<h2>🌎 SALA 3 — MÉXICO VIVO</h2>
+
+<p>
+Las raíces culturales continúan presentes en el México actual.
+</p>
+
+</div>
+
+<div class="sala">
+
+<h3>Tradición y actualidad</h3>
+
+<p>
+Las culturas y tradiciones no permanecen completamente iguales.
+Con el paso del tiempo pueden cambiar algunos elementos, pero
+muchas comunidades continúan conservando prácticas y
+conocimientos que forman parte de su identidad.
+</p>
+
+<p>
+Las nuevas generaciones también pueden participar en la
+conservación y difusión de estas expresiones culturales.
+</p>
+
+</div>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Comunidades</h3>
+
+<p>
+Las comunidades son importantes para conservar conocimientos,
+costumbres y formas de expresión cultural.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Nuevas generaciones</h3>
+
+<p>
+Los jóvenes pueden conocer, valorar y compartir las expresiones
+culturales de sus comunidades.
+</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Patrimonio cultural</h3>
+
+<p>
+Conservar el patrimonio cultural permite que diferentes
+expresiones puedan seguir siendo conocidas por las futuras
+generaciones.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="progresion">
+
+<h4>Progresión 3</h4>
+
+<p>
+Reflexionamos sobre la importancia de conocer y valorar las
+raíces culturales para comprender la diversidad de México y
+su presencia en la actualidad.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="titulo">
+
+<h2>🗺️ MÉXICO Y SU DIVERSIDAD CULTURAL</h2>
+
+</div>
+
+<div class="mapa">
+
+<h3>Un país, muchas culturas</h3>
+
+<p>
+Desde el norte hasta el sur de México existen diferentes
+comunidades, lenguas, tradiciones, alimentos, fiestas,
+artesanías, músicas y formas de vida.
+</p>
+
+<p>
+Esta diversidad forma parte de las raíces vivas que continúan
+construyendo la identidad cultural del país.
+</p>
+
+</div>
+
+</section>
+
+<section id="multimedia">
+
+<div class="titulo">
+
+<h2>🎥 SALA MULTIMEDIA</h2>
+
+<p>
+Recursos para conocer y observar diferentes expresiones culturales.
+</p>
+
+</div>
+
+<div class="multimedia">
+
+<h3>Video cultural</h3>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/ScMzIvxBSi4"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<p>
+En esta sección puedes colocar un video relacionado con las
+tradiciones, culturas o patrimonio de México.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="titulo">
+
+<h2>📸 GALERÍA DEL MUSEO</h2>
+
+</div>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Historia</h3>
+
+<p>Las raíces culturales forman parte de la historia de México.</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Celebraciones</h3>
+
+<p>Las celebraciones reúnen a las comunidades y sus tradiciones.</p>
+
+</div>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Artes</h3>
+
+<p>Las expresiones artísticas muestran parte de la identidad cultural.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="equipo">
+
+<div class="titulo">
+
+<h2>👥 TRABAJO COLABORATIVO</h2>
+
+<p>
+Nuestro museo fue realizado mediante la participación del equipo.
+</p>
+
+</div>
+
+<div class="equipo">
+
+<div class="persona">
+
+<h3>Integrante 1</h3>
+
+<p>elias gael martinez garcia </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section>
+
+<div class="titulo">
+
+<h2>📜 REFLEXIÓN FINAL</h2>
+
+</div>
+
+<div class="reflexion">
+
+<p>
+Conocer las raíces de México nos permite comprender la diversidad
+cultural que existe en nuestro país. Las lenguas, tradiciones,
+artesanías, alimentos, música y celebraciones forman parte de una
+historia que continúa presente.
+
+</p>
+
+<br>
+
+<p>
+Las raíces están vivas porque las personas las mantienen,
+transmiten y transforman con el paso del tiempo. Conocerlas y
+valorarlas ayuda a reconocer la importancia de la diversidad
+cultural de México.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Raíces Vivas de México</h3>
+
+<p>Museo Digital</p>
+
+<p>Proyecto escolar</p>
+
+</footer>
+
+</body>
+</html>
